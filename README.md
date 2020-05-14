@@ -4,4 +4,4 @@
 # RS232 Terminal
 # UART Termilal
  Program Purpose "Serial Terminal Free V21.2
-This program is needed to work through the serial port. 
+This program is needed to work through the PC serial port. 
