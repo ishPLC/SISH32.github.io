@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Serial Terminal ishPLC(C) 2020 </title>
+	<meta charset="utf-8">
+  	<title>Calendar</title>
+	
+ </head>
+
+ <body>
+	
+	<center><h1> Serial Terminal ishPLC(C) 2020 </h1>
+	<center><h2>"Free Version V21.2"</h2>
+
+  	<p><img src="img/01.jpg" alt="nodata"></p>
+	
+	
+	<center><h3> Program Purpose "Serial Terminal Free V21.2" </h3>
+	This program is needed to works through the serial port. 
+	<br> </br>
+	"Serial Terminal Free Version V21.2" is a small program written in C ++ that is needed for express test equipment, including the popular Arduino PLC.
+Basic protocol settings: 9600, 8, N, 1. The port number can be selected in the Serial Terminal program, based on which port your PLC is currently connected to.
+	<br> </br>
+You can go to the PC in the Device Manager - Ports (COM & LPT) and look at which COM port your device is connected to (COM1). (It is possible to use additional utilities to determine the com port.)
+
+	<br> </br>
+	In Arduino PLC, you must use the port setting:
+	<br> </br>
+	void setup () {
+	<br> </br>
+    <h3>Serial.begin(9600); // Serial  (9600, 8, N, 1)</h3>
+	<br> </br>
+	//..... code ....
+	<br> </br>
+	}
+	<br> </br>
+	To output data, for example, reading the value of analog input A0, and outputting this value for transmission to the serial port, you can use the code:
+	<br> </br>
+	int sensorValue0 = analogRead(A0);
+	<br> </br>
+	Serial.print(sensorValue0);
+	<br> </br>
+	(Many of the Arduino PLC programs can be found on the Arduino website and other network resources.)
+	<br> </br>
+	<center><h2>Work in the program "Serial Terminal":</h2>	
+	<br> </br>1. In the "Port #" position, select the number of the active com port (1).
+	<br> </br>2. Choose speed: "Baud Rate", as basiic = 9600
+	<br> </br>3. Click the "Connect Serial" button. If all the settings are made correctly, then data will be sent to your PC from the connected PLC. 
+	<br> </br>4. New option: "Port#" and "Baud Rate" you can set custom data. For what? Perhaps, at the future, PCs will contain a huge number of ports and they will exchange data at higher speeds...
+	<p><img src="img/02.jpg" alt="nodata"></p>
+
+	<center><h2>"Features of the program Serial Terminal"</h2>
+	<br> </br>
+	1. zoom (++) and zoom (-) are buttons for increasing or decreasing the program’s working window, including the font. 
+	<br> </br>
+	2. "Receiving Data Indicator" - LED that lights when receiving data from the PLC.
+	<br> </br>
+	3. The bottom right will show the selected port number and port settings.
+	<br> </br>
+	
+
+	The program is very reliable, simple and easy to use. I recommend using this version for equipment testing: PC - PLC (Arduino for example), etc.
+	<br> </br>
+	I tested it many times in different modes, and made the program "for myself".
+	<br> </br>
+	
+ 	<center><h1> Serial Terminal ishPLC(C) 2020 </h1>
+	<center><h2>"Free Version V33"</h2>
+
+  	<p><img src="img/T232S.GIF" alt="nodata"></p>
+	<br> </br>
+	<center><h2>With Data Logging to report file</h2>
+	<center><h3>For Arduino PLC just choose used port num.</h3>
+	<center><h3>Set Time Stamp: use Y/N </h3>
+	<center><h3>For data logging: use Y/N</h3>
+	<center><h3>In Arduino scetch use: " Serial.begin(9600); "</h3>
+	<p><img src="img/T232.JPG" alt="nodata"></p>
+	<br> </br>
+
+<!-- Serial Terminal ishPLC(C) 2020 -->
+
+	<center><h3> Serial Terminal  </h3>
+	<center><h3> I.Shaturny ishPLC © 2020 </h3>
+	<center><h3>  ishplcprog@gmail.com  </h3>
+	<center><h3> 14 May 2020 </h3>
+	
+	<center><h4> Today: </h4>
+	<script language="javascript" type="text/javascript"><!--
+	var d = new Date();
+
+	var day=new Array("Sun","Mon","Tue",
+	"Wdn","Thr","Fr","Std");
+
+	var month=new Array("jan","feb","mar","apr","may","jun",
+	"jul","aug","sent","oct","nov","dec");
+
+	document.write(day[d.getDay()]+" " +d.getDate()+ " " + month[d.getMonth()]
+	+ " " + d.getFullYear() + "");
+</script>
+
+<!-- I.Shaturny  <ishPLC©2020>-->
+<!-- git.05.2020 ver.21 >-->
+
+
+ </body>
+</html>
